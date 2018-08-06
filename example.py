@@ -11,7 +11,7 @@ to make Forex historical data strategy tests
 # Prepare market data:
 
 # if market data file is already prepared:
-path = '/home/jessie/Desktop/notowaniaM1/edek123.csv'
+path = '/home/user/Desktop/FX_backtest/eurusd_prepared.csv'
 data = pd.read_csv(path, index_col='Date', parse_dates=True)
 
 # if market data file is not prepared, just downloaded from Dukascopy:

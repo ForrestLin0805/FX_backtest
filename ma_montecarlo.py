@@ -13,7 +13,7 @@ number of simulations and priority (maximum profit of strategy or minimum capita
 """
 
 # Uploading market data
-path = '/home/jessie/Desktop/notowaniaM1/edek123.csv'
+path = '/home/user/Desktop/dukascopy/eurusd_prepared.csv'
 data = pd.read_csv(path, index_col='Date', parse_dates=True)
 
 # Simulation parameters
