@@ -11,16 +11,18 @@ Make sure, you have installed necessary packages:
 
 Example of usage:
 1. Run strategy with known parameters and prepared data:
-Run in terminal: python forex.py /home/user/Desktop/FX_backtest/eurusd_prepared.csv
-                 python ma_montecarlo.py /home/user/Desktop/FX_backtest/eurusd_prepared.csv
-                 python ma3_montecarlo.py /home/user/Desktop/FX_backtest/eurusd_prepared.csv
-                 python stoch_montecarlo.py /home/user/Desktop/FX_backtest/eurusd_prepared.csv
+Run in terminal:
+python forex.py /home/user/Desktop/FX_backtest/eurusd_prepared.csv
+python ma_montecarlo.py /home/user/Desktop/FX_backtest/eurusd_prepared.csv
+python ma3_montecarlo.py /home/user/Desktop/FX_backtest/eurusd_prepared.csv
+python stoch_montecarlo.py /home/user/Desktop/FX_backtest/eurusd_prepared.csv
 
 2. Run strategy with known parameters and unprepared data (downloaded from Dukascopy)
-Run in terminal: python forex.py -p /home/user/Desktop/FX_backtest/eurusd.csv
-                 python ma_montecarlo.py -p /home/user/Desktop/FX_backtest/eurusd.csv
-                 python ma3_montecarlo.py -p /home/user/Desktop/FX_backtest/eurusd.csv
-                 python stoch_montecarlo.py -p /home/user/Desktop/FX_backtest/eurusd.csv
+Run in terminal:
+python forex.py -p /home/user/Desktop/FX_backtest/eurusd.csv
+python ma_montecarlo.py -p /home/user/Desktop/FX_backtest/eurusd.csv
+python ma3_montecarlo.py -p /home/user/Desktop/FX_backtest/eurusd.csv
+python stoch_montecarlo.py -p /home/user/Desktop/FX_backtest/eurusd.csv
 
 Script will automatically ask the user about all needed parameters.
 
