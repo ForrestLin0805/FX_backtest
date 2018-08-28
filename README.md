@@ -19,9 +19,12 @@ Run in terminal:
 - python forex.py -p /home/user/Desktop/FX_backtest/eurusd.csv
 
 3. Run montecarlo simulations:
-- python ma_montecarlo.py /home/user/Desktop/FX_backtest/eurusd.csv
+- python ma_montecarlo.py /home/user/Desktop/FX_backtest/eurusd_prepared.csv
+- python ma3_montecarlo.py /home/user/Desktop/FX_backtest/eurusd_prepared.csv
+- python stoch_montecarlo.py /home/user/Desktop/FX_backtest/eurusd_prepared.csv
 
 Script will automatically ask the user about all needed parameters.
+
 
 Note:
 Interval must be entered as: 15T for 15 minutes, 1H for 1 hour etc. 
