@@ -90,3 +90,6 @@ elif strategy_type == 'stochastic':
     strategy = strategy.run_backtest()
     backtest.calculate_ratios(obj=strategy, print_ratios=True)
     backtest.plot_results(obj=strategy)
+
+else:
+    print('Wrong type of strategy passed')
