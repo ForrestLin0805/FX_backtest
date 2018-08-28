@@ -1,3 +1,5 @@
+import argparse
+import os
 import pandas as pd
 import numpy as np
 import backtest
@@ -12,17 +14,30 @@ length, then calculates strategy ratios for each case. User can set manually
 number of simulations and priority (maximum profit of strategy or minimum capital drawdown) 
 """
 
-# Uploading market data
-path = '/home/user/Desktop/dukascopy/eurusd_prepared.csv'
-data = pd.read_csv(path, index_col='Date', parse_dates=True)
+# Setting script arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('path', help='Path to market data file', type=str)
+parser.add_argument('-p', '--prepare', help='Prepare market data downloaded from Dukascopy',
+                    action='store_true')
+args = parser.parse_args()
+path = args.path
 
-# Simulation parameters
-simulations_num = 100
-priority = 'return'
-ma_type = 'SMA'
-start_hour = 8
-end_hour = 18
-interval = '15T'
+# Prepare market data:
+# if market data file is not prepared, just downloaded from Dukascopy:
+if args.prepare:
+    save_path = path
+    data = backtest.prepare_data(path=path, save=True, save_path=save_path)
+else:
+    data = pd.read_csv(path, index_col='Date', parse_dates=True)
+
+os.system('clear')
+# Enter simulation parameters
+simulations_num = int(input('Enter number of simulations : '))
+priority = input('Enter strategy priority (return or drawdown : ')
+ma_type = input('Enter moving averages type (SMA or EMA) : ')
+start_hour = int(input('Enter start trading hour : '))
+end_hour = int(input('Enter end trading hour : '))
+interval = input('Enter interval : ')
 
 
 # Creating empty array to store moving average combinations
@@ -37,6 +52,7 @@ max_drawdown_arr = np.zeros(simulations_num)
 # For loop iterates simulations_num times
 # generating random moving averages, doing a strategy backtest
 # and stores calculated ratios in arrays
+print('Simulation in process...')
 for i in range(simulations_num):
 
     # generating random moving averages
